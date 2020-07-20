@@ -1,2 +1,2 @@
 all:
-	g++ -Wall -Wextra -o testcheck *.cpp -lgtest -lpthread 
+	g++ -Wall -Wextra -o testcheck paramchecker.cpp -lgtest -lpthread 
