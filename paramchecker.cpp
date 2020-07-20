@@ -16,7 +16,10 @@ bool is_resp_rate_ok(float respRate)
 }
 
 bool vitalsAreOk(float bpm, float spo2, float respRate) {
-  if(!is_bpm_ok(bpm) || spo2 < 80 || !is_resp_rate_ok(respRate)) {
+  if(!is_bpm_ok(bpm) || spo2 < 80) {
+    return false;
+  }else if(!is_resp_rate_ok(respRate))
+  {
     return false;
   }
   return true;
