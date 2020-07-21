@@ -14,11 +14,5 @@ bool is_spo2_ok(float spo2)
 }
 
 bool vitalsAreOk(float bpm, float spo2, float respRate) {
-  bool status = true;
-  
-  status = status && is_bpm_ok(bpm);
-  status = status && is_resp_rate_ok(spo2);
-  status = status && is_spo2_ok(respRate);
-  
-  return status;
+  return (is_bpm_ok(bpm) || is_resp_rate_ok(spo2) || is_spo2_ok(respRate));
 }
