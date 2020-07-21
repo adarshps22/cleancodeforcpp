@@ -1,26 +1,24 @@
 bool is_bpm_ok(float bpm)
 {
-  if(bpm < 70 || bpm > 150) {
-    return false;
-  }
-  return true;
+  return bpm < 70 || bpm > 150;
 }
 
 bool is_resp_rate_ok(float respRate)
 {
-   if(respRate < 30 || respRate > 60) {
-    return false;
-  }
-  
-  return true;
+   return respRate < 30 || respRate > 60;
+}
+
+bool is_spo2_ok(flaot spo2)
+{
+  return  spo2 < 80;
 }
 
 bool vitalsAreOk(float bpm, float spo2, float respRate) {
-  if(!is_bpm_ok(bpm) || spo2 < 80) {
-    return false;
-  }else if(!is_resp_rate_ok(respRate))
-  {
-    return false;
-  }
-  return true;
+  bool status = true;
+  
+  status = status && is_bpm_ok(bpm);
+  status = status && is_resp_rate_ok(spo2);
+  status = status && is_spo2_ok(respRate);
+  
+  return status;
 }
