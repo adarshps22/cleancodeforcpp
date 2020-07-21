@@ -8,7 +8,7 @@ bool is_resp_rate_ok(float respRate)
    return respRate < 30 || respRate > 60;
 }
 
-bool is_spo2_ok(flaot spo2)
+bool is_spo2_ok(float spo2)
 {
   return  spo2 < 80;
 }
