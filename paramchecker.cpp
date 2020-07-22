@@ -32,7 +32,7 @@ public:
     }
 };
 
-class spo2 : public vital
+class spo2_vital : public vital
 {
     float _llimit = 80;
     float _spo2;
