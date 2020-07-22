@@ -1,6 +1,6 @@
 #include <list>
 
-static class range_validator {
+class range_validator {
 public:
     static bool in_range_exclusive_limit(float llimit, float ulimit, float value)
     {
