@@ -64,7 +64,7 @@ public:
 class check_vitals
 {
 public:
-    bool all_vitals_ok(std::list<std::unique_ptr<vital>>& vitals)
+    bool all_vitals_ok(std::list<vital*>& vitals)
     {
         for (auto& v : vitals)
         {
@@ -79,10 +79,10 @@ public:
 
 bool vitalsAreOk(float bpm, float spo2, float respRate) {
 
-    std::list<std::unique_ptr<vital>> vitals;
-    vitals.push_back(std::make_unique<bpm_vital>(bpm));
-    vitals.push_back(std::make_unique<spo2_vital>(spo2));
-    vitals.push_back(std::make_unique<resp_rate_vital>(respRate));
+    std::list<vital*> vitals;
+    vitals.push_back(new bpm_vital(bpm));
+    vitals.push_back(new spo2_vital(spo2));
+    vitals.push_back(new resp_rate_vital(respRate));
 
     check_vitals vital_condition;
 
