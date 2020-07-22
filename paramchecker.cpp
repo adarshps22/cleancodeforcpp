@@ -24,7 +24,7 @@ class bpm_vital : public vital {
     float _bpm;
 
 public:
-    bpm_vital(float val) : _bpm(val) {}
+    explicit bpm_vital(float val) : _bpm(val) {}
 
     bool  is_vital_ok()
     {
@@ -38,7 +38,7 @@ class spo2_vital : public vital
     float _spo2;
 
 public:
-    spo2_vital(float val) : _spo2(val) {}
+    explicit spo2_vital(float val) : _spo2(val) {}
 
     bool  is_vital_ok()
     {
@@ -53,7 +53,7 @@ class resp_rate_vital : public vital
     float _resp_rate;
 
 public:
-    resp_rate_vital(float val) : _resp_rate(val){}
+    explicit resp_rate_vital(float val) : _resp_rate(val){}
 
     bool  is_vital_ok()
     {
